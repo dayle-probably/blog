@@ -1,9 +1,9 @@
 ---
 layout: layouts/base.njk
 eleventyNavigation:
-  key: About Me
+  key: About Dayle
   order: 3
 ---
-# About Me
+# About Dayle
 
-I am a person that writes stuff.
+Dayle Probably is an anomaly. He emerged from a mirror universe and wants to go home.
