@@ -3,8 +3,11 @@
   /* --accent-bg:*/
 }
 
+nav a{
+  background: var(--accent-bg);
+}
+
 pre {
-  /* background-color:#eee; */
   overflow:auto;
   margin:0 0 1em;
   padding:.5em 1em;
@@ -33,4 +36,26 @@ pre .line-number span {
 pre .cl {
   display:block;
   clear:both;
+}
+
+header {
+  color: white;
+  background: rgb(0, 0, 0) !important;
+  z-index: 1;
+  position: relative;
+}
+
+header::before {
+  content: "";
+  background-image: url(header.jpg);
+  background-size: cover;
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  opacity: 0.5;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }

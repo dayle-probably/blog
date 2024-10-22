@@ -1,4 +1,14 @@
-# How it Works
+# 8-Bit Breadboard Computer
+
+Here we have an 8-bit computer built on breadboards. Closely follows Ben Eater's [original design](https://eater.net/8bit).
+
+![img1](/8bit-side.jpg)
+![img2](/8bit-top-down.jpg)
+
+Go [here](/programs.html) to see a collection of programs for the computer.
+
+## How it Works
+
 
 Instruction Set
 
