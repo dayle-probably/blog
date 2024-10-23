@@ -3,8 +3,21 @@
   /* --accent-bg:*/
 }
 
-nav a{
-  background: var(--accent-bg);
+@media only screen and (width > 720px) {
+  nav a{
+    background: var(--accent-bg);
+  }
+}
+
+@media only screen and (width <= 720px) {
+  header>nav a{
+    color: white;
+    text-decoration: none;
+  }
+  
+  header>nav a:visited{
+    color: white;
+  }
 }
 
 pre {
