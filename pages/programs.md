@@ -1,9 +1,12 @@
 # Programs
 
+Here are some programs for the SAP-1 using the original instruction set from Ben Eater. For programs using additional instructions, see [this page](/programs-ii.html).
 
 ## Multiply
 
-Multiplies x by y and outputs the product. Does not handle overflow.
+Multiplies x by y and outputs the product. Does not handle overflow. Must reset 13 and 14 between executions.
+
+Source: Ben Eater's [video](https://youtu.be/Zg1NdPKoosU?t=2375)
 
 ```
 LDA 14
@@ -23,14 +26,11 @@ product
 x
 y
 ```
-Must reset 13 and 14 between executions.
-
-Source: Ben Eater's [video](https://youtu.be/Zg1NdPKoosU?t=2375)
 
 
 ## Division
 
-Divides x by y and outputs the quotient. Infinite loop if dividing by 0.
+Divides x by y and outputs the quotient. Must reset 13 and 14 between executions. Infinite loop if dividing by 0.
 
 ```
 LDA 14
@@ -54,31 +54,31 @@ y
 
 ## Add / Subtract loop
 
-A simple program to test conditional jumps. Increments by 1 until carry, then decrements by 1 until 0. Repeat.
+A simple program to test conditional jumps. Increments by `x` until carry, then decrements by `x` until 0. Repeat.
 
 ```
-LDA 15
-ADD 14
-OUT
+LDI 0
+ADD 15
 JC  5
-JMP 1
-SUB 14
 OUT
+JMP 1
+SUB 15
 JZ  1
+OUT
 JMP 5
 -
 -
 -
 -
 -
-1
-0
+-
+x
 ```
 
 
 ## Fibonacci
 
-Looping version:
+Fibonacci sequence algorithm. Loops after it overflows.
 
 ```
 LDI 1
@@ -88,34 +88,13 @@ STA 15
 OUT
 LDA 14
 ADD 15
+JC  0
 STA 14
 OUT
 LDA 15
 ADD 14
 JC  0
 JMP 3
--
-x
-y
-```
-
-Non-looping version:
-
-```
-LDI 1
-STA 14
-LDI 0
-STA 15
-OUT
-LDA 14
-ADD 15
-STA 14
-OUT
-LDA 15
-ADD 14
-JC  13
-JMP 3
-HLT
 x
 y
 ```
