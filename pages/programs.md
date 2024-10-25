@@ -27,6 +27,9 @@ x
 y
 ```
 
+<div class="video-wrapper">
+  <iframe class="youtube-video" src="https://www.youtube.com/embed/pUKqAqaLQ_U" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ## Division
 
@@ -51,30 +54,9 @@ x
 y
 ```
 
-
-## Add / Subtract loop
-
-A simple program to test conditional jumps. Increments by `x` until carry, then decrements by `x` until 0. Repeat.
-
-```
-LDI 0
-ADD 15
-JC  5
-OUT
-JMP 1
-SUB 15
-JZ  1
-OUT
-JMP 5
--
--
--
--
--
--
-x
-```
-
+<div class="video-wrapper">
+  <iframe class="youtube-video" src="https://www.youtube.com/embed/Jp7sntRr8eU" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ## Fibonacci
 
@@ -97,6 +79,33 @@ JC  0
 JMP 3
 x
 y
+```
+
+<div class="video-wrapper">
+  <iframe class="youtube-video" src="https://www.youtube.com/embed/QY8TFrWYDgg" frameborder="0" allowfullscreen></iframe>
+</div>
+
+## Add / Subtract loop
+
+A simple program to test conditional jumps. Increments by `x` until carry, then decrements by `x` until 0. Repeat.
+
+```
+LDI 0
+ADD 15
+JC  5
+OUT
+JMP 1
+SUB 15
+JZ  1
+OUT
+JMP 5
+-
+-
+-
+-
+-
+-
+x
 ```
 
 
