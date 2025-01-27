@@ -15,3 +15,29 @@
       }
   }
 })();
+
+function updateImagesBasedOnTheme(prefersDarkScheme) {
+    const themeSuffixToRemove = prefersDarkScheme ? '-light' : '-dark';
+
+    document.querySelectorAll('img').forEach(img => {
+        if (img.src.includes(themeSuffixToRemove)) {
+            img.style.display = 'none'; // Hide the image
+        } else {
+            img.style.display = ''; // Ensure the other image is visible
+        }
+    });
+}
+
+// Function to handle the update
+function onThemeChange(event) {
+    updateImagesBasedOnTheme(event.matches);
+}
+
+// Initial check on page load
+window.addEventListener('DOMContentLoaded', () => {
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    updateImagesBasedOnTheme(prefersDarkScheme.matches);
+
+    // Listen for changes
+    prefersDarkScheme.addEventListener('change', onThemeChange);
+});
