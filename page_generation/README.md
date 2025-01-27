@@ -6,3 +6,5 @@ The npm package [Marked](https://www.npmjs.com/package/marked) is used.
 
 Debugging? Run this command from inside this directory to generate a single HTML page:
 `./make_html_page.sh ../programs.md ./programs.html`
+
+The `make_html_page.sh` script is used in a loop by `build.sh`.
