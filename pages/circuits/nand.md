@@ -1,13 +1,12 @@
 # NAND Gate
 
-Symbol:
+### Symbol
 
 ![NAND Symbol](/NAND-gate-light.png)
 ![NAND Symbol](/NAND-gate-dark.png)
 
 
-
-Truth Table:
+### Truth Table:
 
 
 | A | B | A NAND B |
@@ -18,18 +17,21 @@ Truth Table:
 | 1 | 1 |    0     |
 
 
-Transistor Schematic:
+### Transistor Schematic:
 
 ![NAND Schematic](/NAND-schematic.png)
 
 
-Breadboard Image:
+### Breadboard Image:
 
 ![NAND Breadboard](/NAND-breadboard.png)
 
 
-Breadboard Video:
+### Breadboard Video:
 
 <div class="video-wrapper">
-  <iframe class="youtube-video" src="https://www.youtube.com/embed/dFisSyjMj7U" frameborder="0" allowfullscreen></iframe>
+  <iframe class="youtube-video" src="https://www.youtube.com/embed/1koBAxVUy2w" frameborder="0" allowfullscreen></iframe>
 </div>
+
+
+Back to project homepage: [Circuits](index.html)
