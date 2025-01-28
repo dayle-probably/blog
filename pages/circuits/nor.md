@@ -18,6 +18,11 @@
 
 ### Transistor Schematic:
 
+![NOR Schematic](/NOR-gate-schematic-2-transistors.png)
+
+Single transistor:
+![NOR Schematic](/NOR-gate-schematic-single-transistor.png)
+
 
 ### Breadboard Image:
 
