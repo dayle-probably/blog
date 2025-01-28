@@ -22,6 +22,8 @@
 
 ### Breadboard Image:
 
+![NOT Breadboard](/NOT-breadboard.jpg)
+
 
 ### Breadboard Video:
 

@@ -21,6 +21,8 @@
 
 ### Breadboard Image:
 
+![NOR Breadboard](/NOR-breadboard.jpg)
+
 
 ### Breadboard Video:
 

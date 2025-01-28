@@ -27,6 +27,8 @@
 
 ### Breadboard Image:
 
+![3-Input NAND Breadboard](/NAND-3-input-breadboard.jpg)
+
 
 ### Breadboard Video:
 

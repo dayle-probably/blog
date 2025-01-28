@@ -24,7 +24,7 @@
 
 ### Breadboard Image:
 
-![NAND Breadboard](/NAND-breadboard.png)
+![NAND Breadboard](/NAND-gate-breadboard.png)
 
 
 ### Breadboard Video:

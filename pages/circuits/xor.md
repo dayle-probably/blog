@@ -23,6 +23,8 @@
 
 ### Breadboard Image:
 
+![XOR Breadboard](/XOR-breadboard.jpg)
+
 
 ### Breadboard Video:
 
