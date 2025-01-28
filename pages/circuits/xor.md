@@ -6,7 +6,7 @@
 ![XOR Symbol](/XOR-gate-dark.png)
 
 
-### Truth Table:
+### Truth Table
 
 | A | B | A XOR B |
 |---|---|---------|
@@ -16,17 +16,17 @@
 | 1 | 1 |    0    |
 
 
-### Transistor Schematic:
+### Transistor Schematic
 
 ![XOR Schematic](/XOR-schematic.png)
 
 
-### Breadboard Image:
+### Breadboard Image
 
 ![XOR Breadboard](/XOR-breadboard.jpg)
 
 
-### Breadboard Video:
+### Breadboard Video
 
 <div class="video-wrapper">
   <iframe class="youtube-video" src="https://www.youtube.com/embed/weKDaC1OH7M" frameborder="0" allowfullscreen></iframe>

@@ -6,7 +6,7 @@
 ![NOT Symbol](/NOT-gate-dark.png)
 
 
-### Truth Table:
+### Truth Table
 
 
 | A | NOT A |
@@ -15,17 +15,17 @@
 | 1 |   0   |
 
 
-### Transistor Schematic:
+### Transistor Schematic
 
 ![NOT Gate Transistor Schematic](/NOT-gate-schematic.png)
 
 
-### Breadboard Image:
+### Breadboard Image
 
 ![NOT Breadboard](/NOT-breadboard.jpg)
 
 
-### Breadboard Video:
+### Breadboard Video
 
 <div class="video-wrapper">
   <iframe class="youtube-video" src="https://www.youtube.com/embed/prY4sEezMwk" frameborder="0" allowfullscreen></iframe>

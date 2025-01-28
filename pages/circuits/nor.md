@@ -6,7 +6,7 @@
 ![NOR Symbol](/NOR-gate-dark.png)
 
 
-### Truth Table:
+### Truth Table
 
 | A | B | A NOR B |
 |---|---|---------|
@@ -16,7 +16,7 @@
 | 1 | 1 |    0    |
 
 
-### Transistor Schematic:
+### Transistor Schematic
 
 ![NOR Schematic](/NOR-gate-schematic-2-transistors.png)
 
@@ -24,12 +24,12 @@ Single transistor:
 ![NOR Schematic](/NOR-gate-schematic-single-transistor.png)
 
 
-### Breadboard Image:
+### Breadboard Image
 
 ![NOR Breadboard](/NOR-breadboard.jpg)
 
 
-### Breadboard Video:
+### Breadboard Video
 
 <div class="video-wrapper">
   <iframe class="youtube-video" src="https://www.youtube.com/embed/l0i2AuhZQIw" frameborder="0" allowfullscreen></iframe>
