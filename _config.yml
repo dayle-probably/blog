@@ -1,0 +1,43 @@
+collections:
+  projects:
+    output: true
+    order:
+      - digital-hourglass.md
+      - NES-game.md
+      - linear-feedback-shift-register.md
+      - 8-bit-adder.md
+      - 8-bit-breadboard-computer.md
+      - cave-game.md
+      - diy-3d-renderer.md
+      - jot-your-thought.md
+      - discord-bot.md
+  circuits:
+    output: true
+    order:
+      - not.md
+      - nand.md
+      - 3-input-nand.md
+      - nor.md
+      - xor.md
+      - full-adder.md
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "circuits"
+    values:
+      layout: "circuit"

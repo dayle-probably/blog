@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/simple.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
+    <title>Dayle Probably</title>
+</head>
+<body>
+  <header>
+    <h1>Dayle Probably</h1>
+    <p>Enjoy!</p>
+    <nav>
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/projects.html">Projects</a></li>
+      
+        <li><a href="/blog.html">Blog</a></li>
+      
+        <li><a href="https://x.com/DayleProbably">𝕏</a></li>
+      
+    </ul>
+</nav>
+
+  </header>
+
+  <main>
+    <h1>8 Bit Breadboard Computer</h1>
+
+<p>Yes, I built an 8-bit computer on breadboards. It closely follows Ben Eater’s <a href="https://eater.net/8bit">original design</a>.</p>
+
+<p><img src="/assets/images/8bit-side.jpg" alt="img1" />
+<img src="/assets/images/8bit-top-down.jpg" alt="img2" /></p>
+
+<p>Go <a href="/8-bit-computer-programs.html">here</a> to see a collection of programs for the computer.</p>
+
+<h2 id="how-it-works">How it Works</h2>
+
+<p>Instruction Set</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0000 NOP - No OPeration
+0001 LDA - LoaD A register with contents of memory address
+0010 ADD - ADD contents of given memory address to A
+0011 SUB - SUBtract 
+0100 STA - STore the value in the A register in a given memory address
+0101 LDI - LoaD Immediate
+0110 JMP - JuMP
+0111 JC  - Jump on Carry
+1000 JZ  - Jump on Zero
+1001
+1010
+1011
+1100
+1101
+1110 OUT - OUTput the value in the A register
+1111 HLT - HaLT
+</code></pre></div></div>
+
+<p>Possible other instructions:</p>
+
+<p>DSP - DiSPlay the contents of a given memory address
+INC - INCrement A by the given 4 bit value (aka Add Immediate)
+DEC - DECrement A by the given 4 bit value (aka Subtract Immediate)
+JNC - Jump on Not Carry
+JNZ - Jump on Not Zero</p>
+
+<h3 id="control-signals">Control Signals</h3>
+
+<ul>
+  <li>HLT - Halts the program</li>
+  <li>MI - Memory address register in</li>
+  <li>RI - RAM in</li>
+  <li>RO - RAM out</li>
+  <li>IO - Instruction Regsiter out</li>
+  <li>II - Instruction Register in</li>
+  <li>AI - A register in</li>
+  <li>AO - A register out</li>
+  <li>EO - Sum out (ALU out)</li>
+  <li>SU - Subtract</li>
+  <li>BI - B register in</li>
+  <li>OI - Output in</li>
+  <li>CE - Counter enable</li>
+  <li>J  - Jump</li>
+  <li>FI - Flags register in</li>
+</ul>
+
+
+<section>
+  <a href="/projects.html">« Back to Projects</a>
+</section>
+
+  </main>
+
+  <footer>
+    <p>Dayle Probably.</p>
+  </footer>
+<script src="/assets/js/scripts.js"></script>
+</body>
+</html>

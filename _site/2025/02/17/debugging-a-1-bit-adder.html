@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/simple.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
+    <title>Dayle Probably</title>
+</head>
+<body>
+  <header>
+    <h1>Dayle Probably</h1>
+    <p>Enjoy!</p>
+    <nav>
+    <ul>
+      
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/projects.html">Projects</a></li>
+      
+        <li><a href="/blog.html">Blog</a></li>
+      
+        <li><a href="https://x.com/DayleProbably">𝕏</a></li>
+      
+    </ul>
+</nav>
+
+  </header>
+
+  <main>
+    <h1>Debugging a 1-Bit Adder</h1>
+
+<p>
+  17 Feb 2025
+  
+  
+</p>
+
+<p>I’m working on building an 8-bit adder using transistors. While soldering together this 1 bit adder I made a mistake and had to debug it to figure out where the error was. Here’s how I did it.</p>
+
+<p><img src="/assets/images/1-bit-adder-protoboard.jpg" alt="Soldered 1-bit adder" /></p>
+
+<p>Testing</p>
+
+<p>When testing the board I immediately realized I had made a mistake, because it did not produce the expected output.</p>
+
+<p>1-bit adder truth table:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>Cin</th>
+      <th>Sum</th>
+      <th>Cout</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="/assets/images/debugging-1-bit-adder-a.jpeg" alt="1-bit adder A-input" /></p>
+
+<p>Expected:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>Cin</th>
+      <th>Sum</th>
+      <th>Cout</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Actual:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>Cin</th>
+      <th>Sum</th>
+      <th>Cout</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="/assets/images/debugging-1-bit-adder-b.jpeg" alt="1-bit adder B-input" /></p>
+
+<p>Inputs: A=0, B=1, C_in=0
+Expected output: Sum=1, C_out=0
+Actual output: Sum=1, C_out=1</p>
+
+<p>Expected:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>Cin</th>
+      <th>Sum</th>
+      <th>Cout</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Actual:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>Cin</th>
+      <th>Sum</th>
+      <th>Cout</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><img src="/assets/images/debugging-1-bit-adder-c.jpeg" alt="1-bit adder C_in-input" /></p>
+
+<p>The Carry-in input (C_in) resulted in the correct output.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>Cin</th>
+      <th>Sum</th>
+      <th>Cout</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Comparing to the simulator
+The next step was to compare these results with the circuit I had build in Logisim.
+Here’s a screenshot of the same circuit (at the logic gate level) in Logisim:</p>
+
+<p><img src="/assets/images/logisim-1-bit-adder-nor-gates-input-test.png" alt="logisim 1-bit-adder" /></p>
+
+<p>Here’s the circuit with the gates labelled to match the simulator:</p>
+
+<p><img src="/assets/images/labelled_gates_1_bit_adder_debugging.jpg" alt="labelled_gates_1_bit_adder_debugging" /></p>
+
+<p>By comparing the state of each gate, we can see that only the I (Sum) gate is incorrect, so it was likely that one of the inputs to that gate was soldering incorrectly. Looking at the inputs to the I (labelled III in Logisim) and considering the truth table for a NOR gate, the only way for that gate to be ON is when both inputs are OFF.</p>
+
+<p>NOR gate truth table:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>OUT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>We expect the top input of that gate to be connected to the output of the E gate, which is correctly ON in this state, so it is a safe guess that the connection between the output of the E gate and that input to the I gate to be soldering incorrectly.</p>
+
+<p>That turned out to be correct and here is the underside of the completed circuit:
+<img src="/assets/images/1-bit-adder-protoboard-underside.jpg" alt="1-bit adder underside" /></p>
+
+<p>Now I just need to make 7 more…</p>
+
+
+<section>
+<a href="/blog.html">« Back to Blog posts</a>
+</section>
+
+  </main>
+
+  <footer>
+    <p>Dayle Probably.</p>
+  </footer>
+<script src="/assets/js/scripts.js"></script>
+</body>
+</html>
