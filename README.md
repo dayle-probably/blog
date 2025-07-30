@@ -20,6 +20,7 @@ Add this to the top otherwise Jekyll will ignore it
 ---
 ```
 
+Pushes to main are automatically deployed via Cloudflare.
 
 
 # Stuff used:
